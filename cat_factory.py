@@ -28,9 +28,11 @@ def get_or_create_output_folder():
         os.mkdir(full_path)
 
 def download_cats(folder):
-   pass 
-
-
+    cat_count = 8
+    for i in range(1, cat_count + 1):
+        name = 'lolcat {}'.format(i)
+        #print(i, end=',')
+        cat_pictures.get_cat(folder,name)
 
 
 if __name__ == '__main__':
