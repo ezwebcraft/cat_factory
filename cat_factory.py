@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
 import os
 import cat_services
+import subprocess
 
 
 def main():
@@ -12,6 +12,7 @@ def main():
     # download cats
     download_cats(folder)
     # display cats
+    display_cats(folder)
 
 
 def print_header():
@@ -45,6 +46,12 @@ def download_cats(folder):
         cat_services.get_cats(folder, name)
 
     print("Done !")
+
+
+def display_cats(folder):
+    # open folder process
+    print('Displaying cat images ....... ^._.^')
+    subprocess.call(['open',folder])
 
 
 if __name__ == '__main__':
