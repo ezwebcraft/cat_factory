@@ -51,7 +51,7 @@ def download_cats(folder):
 def display_cats(folder):
     # open folder process
     print('Displaying cat images ....... ^._.^')
-    subprocess.call(['open',folder])
+    subprocess.call(['open', folder])
 
 
 if __name__ == '__main__':
