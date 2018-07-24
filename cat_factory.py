@@ -51,7 +51,14 @@ def download_cats(folder):
 def display_cats(folder):
     # open folder process
     print('Displaying cat images ....... ^._.^')
-    subprocess.call(['open', folder])
+    if platform.system() == 'Darwin':
+        subprocess.call(['open', folder])
+    elif platform.system() == 'Windows':
+        subprocess.call(['explorer', folder])
+    elif platform.system() == 'Linux':
+        subprocess.call(['xdg-open', folder])
+    else:
+        print("We don't support your os: " + platform.system())
 
 
 if __name__ == '__main__':
